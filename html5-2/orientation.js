@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.11.05.0";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.11.05.1";
 window.addEventListener("deviceorientation", on_device_orientation);
 window.addEventListener("devicemotion", on_device_motion);
 
@@ -25,8 +25,12 @@ function on_device_orientation(e)
 //--------------------------------
 function on_device_motion(e)
 {
-	document.getElementById("id_acc_z").innerHTML = e.accelerationIncludingGravity.z;
-	document.getElementById("id_acc_x").innerHTML = e.accelerationIncludingGravity.x;
-	document.getElementById("id_acc_y").innerHTML = e.accelerationIncludingGravity.y;
+	var acc_z = e.accelerationIncludingGravity.z;
+	var acc_x = e.accelerationIncludingGravity.x;
+	var acc_y = e.accelerationIncludingGravity.y;
+	
+	document.getElementById("id_acc_z").innerHTML = Math.round(acc_z * 100) / 100;
+	document.getElementById("id_acc_x").innerHTML = Math.round(acc_x * 100) / 100;
+	document.getElementById("id_acc_y").innerHTML = Math.round(acc_y * 100) / 100;
 }
 //--------------------------------
