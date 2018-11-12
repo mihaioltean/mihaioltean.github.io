@@ -16,7 +16,7 @@ function on_failure(e)
 //------------------------------
 function start()
 {
-	var c = {audio: true, video: {facingMode: "user"}};
+	var c = {audio: true, video: true};
 	navigator.mediaDevices.getUserMedia(c).then(on_success).catch(on_failure);
 }
 //------------------------------
