@@ -1,7 +1,7 @@
 document.getElementById("id_logic_version").innerHTML = 
-		"Logic version = 2018.11.20.0";
+		"Logic version = 2018.11.20.1";
 		
-var canvas = document.getElementyById("id_canvas");
+var canvas = document.getElementById("id_canvas");
 canvas.addEventListener("touchstart", on_touch);
 
 function on_touch(e)
