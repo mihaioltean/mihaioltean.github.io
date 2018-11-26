@@ -1,9 +1,9 @@
-document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 2018.11.26.7";
+document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 2018.11.26.8";
 
 var canvas = document.getElementById("id_canvas");
 canvas.addEventListener("touchstart", on_touch_start);
 canvas.addEventListener("touchmove", on_touch_move);
-
+canvas.addEventListener("touchmove", on_touch_end);
 
 var canvas_bounding_rect = canvas.getBoundingClientRect();
 
@@ -56,6 +56,19 @@ function on_touch_move(e)
 		context.stroke();
 		pozitii[j].x = e.changedTouches[i].pageX;
 		pozitii[j].y = e.changedTouches[i].pageY;
+	}
+}
+//-------------------------------------------
+function on_touch_end(e)
+{
+	e.preventDefault();
+	
+	for (var i = 0; i < e.changedTouches.length; i++){
+		var j = 0;
+		for (; j < pozitii.length; j++)
+			if (pozitii[j].id == e.changedTouches[i].identifier)
+				break;
+		pozitii.splice(j, 1);
 	}
 }
 //-------------------------------------------
