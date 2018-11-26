@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.11.26.10";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.11.26.11";
 var canvas = document.getElementById("id_canvas");
 canvas.addEventListener("touchstart", on_touch_start);
 canvas.addEventListener("touchmove", on_touch_move);
@@ -14,18 +14,22 @@ function on_touch_start(e)
 	for (var i = 0; i < e.changedTouches.length; i++){
 		var context = canvas.getContext("2d");
 		context.beginPath();
-		context.fillStyle = "black";
+		var last_pos = {x: e.changedTouches[i].pageX, 
+						y: e.changedTouches[i].pageY, 
+						id: e.changedTouches[i].identifier,
+						color: get_random_color()};
+		last_pos_array.push(last_pos);
+
+		context.fillStyle = last_pos_array[last_pos_array.length - 1].color;
+		context.strokeStyle = last_pos_array[last_pos_array.length - 1].color;
+		
 		context.arc(e.changedTouches[i].pageX - canvas_bounding_rect.left,
 					e.changedTouches[i].pageY - canvas_bounding_rect.top,
 					10,
 					0, 2 * Math.PI);
 		context.fill();
 		context.stroke();
-		var last_pos = {x: e.changedTouches[i].pageX, 
-						y: e.changedTouches[i].pageY, 
-						id: e.changedTouches[i].identifier};
 
-		last_pos_array.push(last_pos);
 	}
 }
 //------------------------------------
@@ -42,6 +46,8 @@ function on_touch_move(e)
 		var context = canvas.getContext("2d");
 		context.beginPath();
 		context.lineWidth = 20;
+		context.fillStyle = last_pos_array[j].color;
+		context.strokeStyle = last_pos_array[j].color;
 		context.moveTo(last_pos_array[j].x - canvas_bounding_rect.left, last_pos_array[j].y - canvas_bounding_rect.top);
 		context.lineTo(e.changedTouches[i].pageX - canvas_bounding_rect.left,
 					e.changedTouches[i].pageY - canvas_bounding_rect.top);
@@ -49,7 +55,9 @@ function on_touch_move(e)
 		
 		context.beginPath();
 		context.lineWidth = 1;		
-		context.fillStyle = "black";
+		context.fillStyle = last_pos_array[j].color;
+		context.strokeStyle = last_pos_array[j].color;
+
 		context.arc(e.changedTouches[i].pageX - canvas_bounding_rect.left,
 					e.changedTouches[i].pageY - canvas_bounding_rect.top,
 					10,
