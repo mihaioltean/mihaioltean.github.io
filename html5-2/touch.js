@@ -16,6 +16,7 @@ function get_random_color()
 	var s = "#";
 	for (var i = 0; i < 6; i++)
 		s = s + litere[Math.floor(Math.random() * 16)];
+	return s;
 }
 //------------------------------------
 function on_touch_start(e)
