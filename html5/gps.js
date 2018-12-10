@@ -4,7 +4,7 @@ document.getElementById("id_start").addEventListener("click", get_position);
 //---------------------------
 function get_position()
 {
-	navigator.geolocation.getPosition(on_gps_ok, on_error);
+	navigator.geolocation.getCurrentPosition(on_gps_ok, on_error);
 }
 //---------------------------
 function on_gps_ok(e)
