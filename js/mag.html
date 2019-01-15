@@ -2,11 +2,23 @@
 
 <html>
 <body>
+<p>1</p>
 <p id = "id_x"></p>
 <p id = "id_y"></p>
 <p id = "id_z"></p>
 
 <script>
+let sensor = new Magnetometer();
+sensor.start();
+
+sensor.onreading = () => {
+    document.getElementById("id_x").innerHTML = sensor.x;
+    document.getElementById("id_y").innerHTML = sensor.y;
+    document.getElementById("id_z").innerHTML = sensor.z;
+};
+
+sensor.onerror = event => console.log(event.error.name, event.error.message)
+/*
 let magSensor = new Magnetometer({frequency: 60});
 
 magSensor.addEventListener('reading', on_read_magnet);
@@ -19,7 +31,7 @@ function on_read_magnet()
 }
 
 magSensor.start();
-
+*/
 </script>
 
 </body>
