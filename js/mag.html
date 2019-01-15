@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+<p id = "id_x"></p>
+<p id = "id_y"></p>
+<p id = "id_z"></p>
+
+<script>
+let magSensor = new Magnetometer({frequency: 60});
+
+magSensor.addEventListener('reading', on_read_magnet);
+function on_read_magnet()
+{
+  document.getElementById("id_x").innerHTML = magSensor.x;
+  document.getElementById("id_y").innerHTML = magSensor.y;
+
+  document.getElementById("id_z").innerHTML = magSensor.z;
+}
+
+magSensor.start();
+
+</script>
+
+</body>
+</html>
