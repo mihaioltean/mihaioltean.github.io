@@ -11,7 +11,8 @@
 let sensor = new Magnetometer();
 sensor.start();
 
-sensor.onreading = () => {
+sensor.onreading = () => 
+{
     document.getElementById("id_x").innerHTML = sensor.x;
     document.getElementById("id_y").innerHTML = sensor.y;
     document.getElementById("id_z").innerHTML = sensor.z;

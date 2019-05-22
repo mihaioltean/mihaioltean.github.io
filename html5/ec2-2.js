@@ -34,8 +34,8 @@
 	 //----------------------------------
 	 this.afisare = function()
 	 {
-		document.getElementById("id_x1").innerHTML = this.x1.re + " + " + this.x1.im + "i";
-		document.getElementById("id_x2").innerHTML = this.x2.re + " + " + this.x2.im + "i";
+		document.getElementById("id_x1").innerHTML = "x1 = " + this.x1.re + " + " + this.x1.im + "i";
+		document.getElementById("id_x2").innerHTML = "x2 = " + this.x2.re + " + " + this.x2.im + "i";
 	 }
  }
  //----------------------------------
