@@ -1,4 +1,4 @@
-document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 2018.11.05.4";
+document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 2019.05.22.0";
 
 window.addEventListener("deviceorientation", on_device_orientation);
 window.addEventListener("devicemotion", on_device_motion);
@@ -6,9 +6,10 @@ window.addEventListener("devicemotion", on_device_motion);
 //------------------------------------------------------
 function on_device_orientation(e)
 {
-	document.getElementById("id_alpha").innerHTML = "Alpha = " + e.alpha;
-	document.getElementById("id_beta").innerHTML = "Beta = " + e.beta;
-	document.getElementById("id_gamma").innerHTML = "Gamma = " + e.gamma;
+	// please note that some devices do not have gyroscope so these data are not displayed
+	document.getElementById("id_alpha").innerHTML = "Alpha (Z) = " + e.alpha;
+	document.getElementById("id_beta").innerHTML = "Beta (Y) = " + e.beta;
+	document.getElementById("id_gamma").innerHTML = "Gamma (X) = " + e.gamma;
 	
 	var canvas = document.getElementById("id_canvas");
 	var context = canvas.getContext("2d");
@@ -34,7 +35,7 @@ function on_device_motion(e)
 	document.getElementById("id_acc_x").innerHTML = "X = " + Math.round(acc_x * 100) / 100 ;
 	document.getElementById("id_acc_y").innerHTML = "Y = " + Math.round(acc_y * 100) / 100;
 	
-	document.getElementById("id_rot_x").innerHTML = "X = " + -Math.atan(acc_x / acc_z) * 180 / Math.PI;
-	document.getElementById("id_rot_y").innerHTML = "Y = " + Math.atan(acc_y / acc_z) * 180 / Math.PI;
+	document.getElementById("id_rot_x").innerHTML = "X (gamma) = " + -Math.atan(acc_x / acc_z) * 180 / Math.PI;
+	document.getElementById("id_rot_y").innerHTML = "Y (beta) = " + Math.atan(acc_y / acc_z) * 180 / Math.PI;
 }
 //------------------------------------------------------
