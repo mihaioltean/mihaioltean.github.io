@@ -224,7 +224,7 @@ function fitness_regression(program, code_length, num_variables, num_training_da
 //---------------------------------------------------------------------------
 function fitness_classification(program, code_length, num_variables, num_training_data, training_data, target, eval_matrix)
 {
-	program.fitness = 1e+308;
+	program.fitness = 3.4e38;
 	program.best_index = -1;
 
 	compute_eval_matrix(c, code_length, num_variables, num_training_data, training_data, eval_matrix);
