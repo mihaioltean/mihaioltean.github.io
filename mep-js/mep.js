@@ -49,7 +49,7 @@ function allocate_chromosome(params)
 	var program = {}; 
 	program.code = new Array(params.code_length);
 	if (params.num_constants)
-		program.constants = new Array(params.num_constants);
+		program.constants = new Float32Array(params.num_constants);
 	else
 		program.constants = [];
 	return program;
@@ -65,13 +65,13 @@ function allocate_training_data(num_training_data, num_variables)
 {
 	var data = new Array(num_training_data);
 	for (var i = 0; i < num_training_data; i++)
-		data[i] = new Array(num_variables);
+		data[i] = new Float32Array(num_variables);
 	return data;
 }
 //---------------------------------------------------------------------------
 function allocate_target_data(num_training_data)
 {
-	data = new Array(num_training_data);
+	data = new Float32Array(num_training_data);
 	return data;
 }
 //---------------------------------------------------------------------------
@@ -79,7 +79,7 @@ function allocate_partial_expression_values(num_training_data, code_length)
 {
 	var expression_value = new Array(code_length);
 	for (var i = 0; i < code_length; i++)
-		expression_value[i] = new Array(num_training_data);
+		expression_value[i] = new Float32Array(num_training_data);
 	return expression_value;
 }
 //---------------------------------------------------------------------------
