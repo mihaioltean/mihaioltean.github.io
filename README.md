@@ -1,6 +1,9 @@
-# mihaioltean.github.io
+# Aplicatii diverse
 
-### Aplicatii web
+## Aplicatii HTML 5
+
+## Aplicatii Android
+
 
 **My personal website** and _some www apps_
 
