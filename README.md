@@ -1,5 +1,5 @@
-# Aplicatii diverse
-
+# Aplicatii diverse pentru material de Programare Mobile
+ 
 ## Aplicatii HTML 5
 
 ## Aplicatii Android
