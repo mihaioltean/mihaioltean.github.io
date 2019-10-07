@@ -1,9 +1,6 @@
-# Aplicatii diverse pentru material de Programare Mobile
+# Aplicatii diverse pentru materia de Programare Dispozive Mobile
  
 ## Aplicatii HTML 5
-
-## Aplicatii Android
-
 
 **My personal website** and _some www apps_
 
