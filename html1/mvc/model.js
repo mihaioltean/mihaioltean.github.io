@@ -46,10 +46,10 @@ class t_eq2_model{
 	get_solutions()
 	{
 		var solutions = {};
-		solutions.x1_re = x1_re;
-		solutions.x1_im = x1_im;
-		solutions.x2_re = x2_re;
-		solutions.x2_re = x2_re;
+		solutions.x1_re = this.x1_re;
+		solutions.x1_im = this.x1_im;
+		solutions.x2_re = this.x2_re;
+		solutions.x2_im = this.x2_im;
 		return solutions;
 	}
 }

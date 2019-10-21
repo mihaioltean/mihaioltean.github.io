@@ -2,7 +2,7 @@ class t_eq2_view{
 	events;
 	constructor()
 	{
-		document.getElementById("id_button").addEventListener("click", this.on_solve_click);
+		document.getElementById("id_button").addEventListener("click", this.on_solve_click.bind(this));
 	}
 	
 	set_events_list(events)
@@ -14,7 +14,7 @@ class t_eq2_view{
 	{
 		//ar trebui sa apelam metoda on_solve din controller ... dar nu putem direct
 		// generam un eveniment care apeleaza metoda on_solve stocata in lista
-		events.call_event("solve_clicked_uab");
+		this.events.call_event("solve_clicked_uab");
 	}
 	
 	get_a()
