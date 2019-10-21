@@ -9,7 +9,7 @@ class t_eq2_controller{
 		// cream o lista de functii
 		var events = new t_events();
 		// adaugam on_solve (din controller) in lista e functii
-		events.add_event("on_solve_clicked_uab", this.on_solve);
+		events.add_event("on_solve_clicked_uab", this.on_solve.bind(this));
 		// transmitem lista de functii la view
 		this.view.set_events(events);
 	}
