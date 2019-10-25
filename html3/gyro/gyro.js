@@ -12,7 +12,13 @@ function on_orientation_uab(e)
 
 function on_motion_uab(e)
 {
-	document.getElementById("id_acc_z").innerHTML = Math.round(e.accelerationIncludingGravity.z * 100)/100;
-	document.getElementById("id_acc_x").innerHTML = Math.round(e.accelerationIncludingGravity.x * 100)/100;
-	document.getElementById("id_acc_y").innerHTML = Math.round(e.accelerationIncludingGravity.y * 100)/100;	
+	var acc = e.accelerationIncludingGravity;
+	
+	document.getElementById("id_acc_z").innerHTML = Math.round(acc.z * 100)/100;
+	document.getElementById("id_acc_x").innerHTML = Math.round(acc.x * 100)/100;
+	document.getElementById("id_acc_y").innerHTML = Math.round(acc.y * 100)/100;	
+	
+	document.getElementById("id_beta_acc").innerHTML = Math.round(Math.atan(acc.x / acc.z) / Math.PI * 180 * 100) / 100;
+	
+	document.getElementById("id_gamma_acc").innerHTML = Math.round(Math.atan(acc.y / acc.z) / Math.PI * 180 * 100) / 100;
 }
