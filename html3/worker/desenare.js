@@ -1,4 +1,4 @@
-document.getElementById("id_logic").innerHTML = "Logic version = 2019.11.1.3";
+document.getElementById("id_logic").innerHTML = "Logic version = 2019.11.1.4";
 
 document.getElementById("id_start").addEventListener("click", start);
 document.getElementById("id_stop").addEventListener("click", stop);
@@ -31,7 +31,7 @@ function start()
 	
 	var muncitor = new Worker("calcul_prime.js");
 	muncitor.onmessage = function(e){
-		document.getElementById("id_prime").innerHTML = e.data;s
+		document.getElementById("id_prime").innerHTML = e.data;
 	}
 
 	var raza_mare = 100;
