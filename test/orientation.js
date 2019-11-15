@@ -6,7 +6,7 @@ function ok_f()
 
 function not_ok_f(e)
 {
-	allert(e);
+	alert(e);
 }
 
 if (typeof(DeviceOrientationEvent.requestPermission) == "function"){
