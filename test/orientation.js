@@ -1,8 +1,8 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2019.11.15.2";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2019.11.15.3";
 //-----------------------------------
 function ok_f(result)
 {
-	if (result === "granted")
+	if (result == "granted")
 		window.addEventListener("deviceorientation", on_device_orientation);
 }
 //-----------------------------------
@@ -11,7 +11,7 @@ function not_ok_f(e)
 	alert(e);
 }
 //-----------------------------------
-if (typeof(DeviceOrientationEvent.requestPermission) == "function"){
+if (typeof(DeviceOrientationEvent.requestPermission) === "function"){
 	DeviceOrientationEvent.requestPermission().then(ok_f).catch(not_ok_f);
 }
 else{
