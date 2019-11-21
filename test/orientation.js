@@ -1,5 +1,5 @@
 
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2019.11.15.4";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2019.11.15.5";
 document.getElementById("id_request").addEventListener("click", request_permission);
 //-----------------------------------
 function ok_f(result)
@@ -15,7 +15,7 @@ function not_ok_f(e)
 	alert(e);
 }
 //-----------------------------------
-if (typeof(DeviceOrientationEvent.requestPermission) === "function"){
+if (typeof(DeviceOrientationEvent.requestPermission) == "function"){
 }
 else{
 	window.addEventListener("deviceorientation", on_device_orientation);
