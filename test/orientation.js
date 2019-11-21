@@ -1,9 +1,13 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2019.11.15.3";
+
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2019.11.15.4";
+document.getElementById("id_request").addEventListener("click", request_permission);
 //-----------------------------------
 function ok_f(result)
 {
 	if (result == "granted")
 		window.addEventListener("deviceorientation", on_device_orientation);
+	else
+		alert("permission not granted");
 }
 //-----------------------------------
 function not_ok_f(e)
@@ -12,13 +16,17 @@ function not_ok_f(e)
 }
 //-----------------------------------
 if (typeof(DeviceOrientationEvent.requestPermission) === "function"){
-	DeviceOrientationEvent.requestPermission().then(ok_f).catch(not_ok_f);
 }
 else{
 	window.addEventListener("deviceorientation", on_device_orientation);
 }	
 //-----------------------------------
 window.addEventListener("devicemotion", on_device_motion);
+
+function request_permission()
+{
+	DeviceOrientationEvent.requestPermission().then(ok_f).catch(not_ok_f);	
+}
 
 //--------------------------------
 function on_device_orientation(e)
