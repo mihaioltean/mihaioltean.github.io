@@ -1,8 +1,9 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2019.11.15.1";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2019.11.15.2";
 //-----------------------------------
-function ok_f()
+function ok_f(result)
 {
-	window.addEventListener("deviceorientation", on_device_orientation);
+	if (result === "granted")
+		window.addEventListener("deviceorientation", on_device_orientation);
 }
 //-----------------------------------
 function not_ok_f(e)
