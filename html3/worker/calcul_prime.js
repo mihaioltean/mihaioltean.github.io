@@ -6,7 +6,7 @@ function este_prim(n)
 	return false;	
 }
 
-for (var i = 1E11; i < 1E12 i++)
+for (var i = 1E11; i < 1E12; i++)
 	if (este_prim(i)){
 		postMessage(i);
 	}
