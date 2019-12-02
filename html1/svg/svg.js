@@ -1,5 +1,5 @@
 document.getElementById("id_logic_version").innerHTML = "Logic = 2019.12.02.1";
-document.getElementById("id_cerere", request_clicked);
+document.getElementById("id_cerere").addEventListener("click", request_clicked);
 
 function ok_f(p)
 {
