@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic = 2019.12.02.0";
+document.getElementById("id_logic_version").innerHTML = "Logic = 2019.12.02.1";
 
 window.addEventListener("deviceorientation", on_gyro_data_uab); 
 window.addEventListener("devicemotion", on_acc_data_uab); 
@@ -9,6 +9,7 @@ function deseneaza(unghi_x, unghi_y)
 	var circle = document.getElementById("id_circle");
 	var svg = document.getElementById("id_svg");
 
+	var = circle.getAttribute("r");
 	// adaugam un cerc la cale
 	var x = unghi_x / 90 * (svg.width / 2 - r) + svg.width / 2;
 	var y = unghi_y / 90 * (svg.height / 2 - r) + svg.height / 2;
