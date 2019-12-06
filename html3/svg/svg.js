@@ -1,7 +1,30 @@
 document.getElementById("id_logic_version").innerHTML = "Logic version = 2019.12.06.0";
+document.getElementById("id_button").addEventListener("click", on_cere_permisiuni);
 
-window.addEventListener("deviceorientation", on_orientation_uab);
+if (typeof(DeviceOrientationEvent.requestPermission) == "function"){
+}
+else
+	window.addEventListener("deviceorientation", on_orientation_uab);
+
 window.addEventListener("devicemotion", on_motion_uab);
+
+function f_ok(p)
+{
+	if (p == "granted")
+		window.addEventListener("deviceorientation", on_orientation_uab);
+	else
+		alert("Permisiune respinsa");
+}
+
+function f_not_ok(p)
+{
+	alert("Promisiune respinsa");
+}
+
+function on_cere_permisiuni()
+{
+	DeviceOrientationEvent.requestPermission().then(f_ok).catch(f_not_ok);
+}
 
 function desenare(beta, gamma)
 {
