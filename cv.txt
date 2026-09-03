@@ -1,0 +1,63 @@
+
+Site web: https://mihaioltean.github.io/
+
+Am fost cadru didactic universitar la UBB (2004-2017) și UAB (2017-2020).
+
+Am câștigat premiul al II-lea la olimpiada națională de informatică în 1995.
+
+Am fost membru al lotului olimpic (extins) de informatică în 1995 (https://hall-of-fame.sepi.ro/loturi-nationale/1995_lot_national)
+
+Am scris prima carte de informatică (Culegere de probleme rezolvate în Pascal, publicată la editura Microinformatica 1995) pe clasa a XII-a.
+
+Am câștigat prima bursă de performanță (din istoria recentă (după revoluție) a UBB Cluj-Napoca) în 1996.
+
+Am obținut un doctorat în Inteligența Artificială în 2004.
+
+Am publicat 80 articole științifice și 8 cărți cu un total de 2800 citări: https://scholar.google.ro/citations?user=xNPW0mkAAAAJ&hl=en
+
+Am propus MEP (un algoritm de inteligență artificială) care are este folosit (până astăzi) în peste 370 articole științifice și menționat în peste 2000 (conform Google Scholar) (detalii la https://mepx.org).
+
+#1 in top cercetători in informatică (perioada 2001-2006). Topul a fost realizat de către Ad-Astra. Link-ul este salvat aici: https://web.archive.org/web/20061009103438/http://www.ad-astra.ro/cartea-alba/authors.php?domain_id=40 și trebuie sortat (manual) după  "Factor de impact raportat la numărul de autori, însumat."
+
+Am propus un calculator optic. Despre acesta s-a scris și pe Hacker News: https://news.ycombinator.com/item?id=12362044 . Din păcate pagina mea web menționată acolo (http://www.cs.ubbcluj.ro/~moltean/optical/) nu mai există.
+
+Am creat setul de date Fruits-360 care este pe poziția 26 (din peste 700.000) al celor mai votate seturi pe Kaggle (site-ul Google de Machine Learning) (detalii la https://www.kaggle.com/moltean/fruits).
+
+Am proiectat și construit (împreună cu studenții) primul robot umanoid românesc (Jenny 5) cu care a câștigat mai multe concursuri naționale (detalii la https://jenny5.org/).
+
+Am construit mai multe proiecte de impact. Ultimul, un acoperiș multifunctional, care a fost prezentat la mai multe televiziuni. Un exemplu de la Antena 3 este aici: https://www.youtube.com/watch?v=gHj2mii2A8s&list=PLjBth2yNEand8Z56o2wAQBtsCcm-yIoAG&index=26&t=318s
+
+
+Salut,
+
+Sunt interesat să susțin o prezentare la conferința TEDx Cluj-Napoca despre un vehicul solar pe care l-am construit.
+
+Detalii despre proiect sunt aici:
+
+https://github.com/solar-b
+
+Un film cu acest vehicul se găsește aici:
+
+https://www.youtube.com/shorts/z7gU_yXqONQ
+
+Am prezentat acest vehicul la cea mai mare expoziție de biciclete/triciclete din Europa: VELOBerlin.
+
+Vehiculul a fost prezentat de către televiziunea germană RTL+: 
+
+https://www.youtube.com/watch?v=BdNvoueisso
+
+cu mesajul: "This could be the future".
+
+În comunitatea Reddit de vehicule electrice (/r/electricvehicles)
+
+comentariul "Congrats on beating Aptera to producing a solar vehicle" a primit cele mai multe voturi: https://www.reddit.com/r/electricvehicles/comments/1uxwhnx/comment/oxv1056/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+
+CV-ul meu, pe scurt, este mai jos.
+
+vă mulțumesc,
+Mihai Oltean
+0740207845
+
+
+
+
